@@ -25,6 +25,7 @@ pip install rk_test_widget
 ```
 
 ```
+npm install
 npm run build
 ```
 
