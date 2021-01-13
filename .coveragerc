@@ -1,0 +1,2 @@
+[run]
+omit = rk_test_widget/tests/*
