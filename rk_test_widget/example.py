@@ -69,8 +69,6 @@ class Smoother(DOMWidget):
 
     @observe('alpha')
     def _observe_alpha(self, change):
-        # print(f"Alpha changed. old: {change['old']}, new: {change['new']}")
-        # self.beta = change['new'] * 10
         self.smooth_data()
 
     def smooth_data(self):
@@ -78,7 +76,6 @@ class Smoother(DOMWidget):
             self.smoothed_dataframe[self.y_col] = self.dataframe[self.y_col]
         else:
             self.smoothed_dataframe[self.y_col] = self.dataframe[self.y_col].rolling(self.alpha).mean().values
-
 
         self.x = self.smoothed_dataframe.index.tolist() if self.x_col == 'index' else self.smoothed_dataframe[self.x_col].tolist()
         self.y = self.smoothed_dataframe.index.tolist() if self.y_col == 'index' else self.smoothed_dataframe[self.y_col].tolist()
