@@ -1,5 +1,8 @@
 // Copyright (c) Roman K
 // Distributed under the terms of the Modified BSD License.
+import React from 'react'
+import { render } from 'react-dom'
+import { SampleComponent } from './SampleComponent'
 
 import {
   DOMWidgetModel,
@@ -44,22 +47,12 @@ export class ExampleModel extends DOMWidgetModel {
 
 export class ExampleView extends DOMWidgetView {
   render() {
-    this.el.classList.add('custom-widget');
-
-    this.value_changed();
-    this.number_changed();
-    this.model.on('change:value', this.value_changed, this);
-    this.model.on('change:number', this.number_changed, this);
-  }
-
-  value_changed() {
-    console.log('Val changed', this.model.get('value'))
-    this.el.textContent = this.model.get('value');
-  }
-
-  number_changed() {
-    console.log('Num changed', this.model.get('number'))
-    this.el.textContent = `Num: ${this.model.get('number')}`
+    const element  = React.createElement(
+      SampleComponent,
+      { model: this.model },
+      null
+    );
+    render(element, this.el)
   }
 }
 
