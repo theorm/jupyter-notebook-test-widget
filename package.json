@@ -11,7 +11,10 @@
   "files": [
     "lib/**/*.js",
     "dist/*.js",
-    "css/*.css"
+    "dist/*.map",
+    "css/*.css",
+    "lib/**/*.map",
+    "lib/**/*.ts"
   ],
   "homepage": "https://github.com//asdf",
   "bugs": {
