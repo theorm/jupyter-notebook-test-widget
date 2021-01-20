@@ -31,7 +31,7 @@ npm run build
 
 ```bash
 jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build
-jupyter labextension install .
+jupyter labextension install --dev-build=True --log-level=DEBUG .
 ```
 
 ## Run Jupyter Lab

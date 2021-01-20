@@ -13,6 +13,7 @@
     "rootDir": "src",
     "skipLibCheck": true,
     "sourceMap": true,
+    "inlineSources": true,
     "strict": true,
     "strictPropertyInitialization": false,
     "target": "es2015"
