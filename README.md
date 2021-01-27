@@ -27,7 +27,7 @@ This way JupyterLab does not need to be rebuilt.
 During development it is recommended to link the extension project using the following command:
 
 ```
-jupyter labextension build --debug --development True .
+jupyter labextension develop . --overwrite --debug
 ```
 
 This is similar to `pip install -e`.
@@ -39,6 +39,18 @@ jupyter labextension build --debug --development True .
 ```
 
 Run the command above every time you need to rebuild the JS part of the extension.
+
+**OR* run it in watch mode:
+
+```
+jupyter labextension watch --debug --development True .
+```
+
+then in another terminal session run typescript compiler in watch mode:
+
+```
+yarn watch:lib
+```
 
 ## Run Jupyter Lab
 

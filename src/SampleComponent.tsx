@@ -11,7 +11,7 @@ export const SampleComponent = ({ model } : Props) => {
   const [inputValue, setInputValue] = React.useState<string>(value)
 
   React.useEffect(() => {
-    console.log('Context value changed:', value)
+    console.log('*** Context value changed:', value)
     setInputValue(value)
   }, [value])
 
