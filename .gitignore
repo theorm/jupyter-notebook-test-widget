@@ -156,3 +156,5 @@ rk_test_widget/labextension/*.tgz
 rk_test_widget/labextension
 
 .venv
+
+static

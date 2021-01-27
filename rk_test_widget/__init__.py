@@ -7,4 +7,8 @@
 from .example import ExampleWidget, Smoother
 from ._version import __version__, version_info
 
-from .nbextension import _jupyter_nbextension_paths
+def _jupyter_labextension_paths():
+    return [{
+        "src": "labextension",
+        "dest": "rk_test_widget"
+    }]
